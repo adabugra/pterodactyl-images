@@ -1,8 +1,8 @@
-FROM        --platform=$TARGETOS/$TARGETARCH azul/zulu-openjdk-alpine:17-latest
+FROM        azul/zulu-openjdk-alpine:17-latest
 
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-COPY        ./../entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/bash", "/entrypoint.sh" ]
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/ash", "/entrypoint.sh" ]
