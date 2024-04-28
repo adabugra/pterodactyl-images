@@ -1,4 +1,4 @@
-name: Build and Push Docker Images
+name: Build and Push Corretto Images
 
 on:
   workflow_dispatch:
@@ -27,4 +27,4 @@ jobs:
     - name: Build and push
       run: |
         chmod +x ./build.sh
-        ./build.sh corretto/${{ matrix.java_version }} corretto:${{ matrix.java_version }}
+        ./build.sh corretto/${{ matrix.java_version }} corretto
