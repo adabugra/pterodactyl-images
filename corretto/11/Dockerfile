@@ -1,5 +1,7 @@
 FROM        amazoncorretto:11-alpine-jdk
 
+RUN         apk add --no-cache libstdc++
+
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container

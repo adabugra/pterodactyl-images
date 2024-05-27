@@ -1,5 +1,7 @@
 FROM        eclipse-temurin:11-alpine
 
+RUN         apk add --no-cache libstdc++
+
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
