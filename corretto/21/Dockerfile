@@ -1,6 +1,6 @@
 FROM        amazoncorretto:21-alpine-jdk
 
-RUN         apk add --no-cache libstdc++
+RUN         apk add --no-cache libstdc++ fontconfig ttf-dejavu
 
 USER        container
 ENV         USER=container HOME=/home/container
