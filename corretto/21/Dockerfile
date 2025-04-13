@@ -1,6 +1,6 @@
 FROM        amazoncorretto:21-alpine-jdk
 
-RUN         apk add --no-cache libstdc++ fontconfig ttf-dejavu
+RUN         apk add --no-cache libstdc++ fontconfig ttf-dejavu argon2-libs
 
 USER        container
 ENV         USER=container HOME=/home/container
