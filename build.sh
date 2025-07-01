@@ -14,12 +14,12 @@ build_tag_and_push() {
     major_version=$(echo $java_version | awk -F '.' '{print $2}')
   fi
 
-  local full_tag="ghcr.io/maks1116/pterodactyl-images:${base_tag}-${java_version}"
+  local full_tag="ghcr.io/adabugra/pterodactyl-images:${base_tag}-${java_version}"
   docker tag $base_tag $full_tag
-  docker tag $base_tag ghcr.io/maks1116/pterodactyl-images:${base_tag}-${major_version}
+  docker tag $base_tag ghcr.io/adabugra/pterodactyl-images:${base_tag}-${major_version}
 
   docker push $full_tag
-  docker push ghcr.io/maks1116/pterodactyl-images:${base_tag}-${major_version}
+  docker push ghcr.io/adabugra/pterodactyl-images:${base_tag}-${major_version}
 }
 
 build_tag_and_push "$1" "$2"
