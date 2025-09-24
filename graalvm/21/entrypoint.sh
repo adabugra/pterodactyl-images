@@ -26,6 +26,9 @@
 TZ=${TZ:-Europe/Istanbul}
 export TZ
 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Set environment variable that holds the Internal Docker IP
 INTERNAL_IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
 export INTERNAL_IP
