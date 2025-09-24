@@ -4,7 +4,6 @@ RUN         microdnf install -y \
                 fontconfig \
                 dejavu-sans-fonts \
                 libstdc++ \
-                argon2 \
                 glibc-langpack-tr \
                 tzdata \
             && microdnf clean all
