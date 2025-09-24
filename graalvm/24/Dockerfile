@@ -5,7 +5,9 @@ RUN         microdnf install -y \
                 dejavu-sans-fonts \
                 libstdc++ \
                 glibc-langpack-tr \
+                glibc-langpack-en \
                 tzdata \
+                iproute \
             && microdnf clean all
 
 ENV         LANG=tr_TR.UTF-8 \
